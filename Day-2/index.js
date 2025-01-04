@@ -110,4 +110,39 @@ console.log(x < 10 && y < 1);
 console.log(x == 5 || y == 5);//returns true if one or both expressions are true
 console.log(x == 5 || y == 3);
 
+//----------------------------------------------------------------------
+let myVariable;//declared but not intialized
+console.log(myVariable);//will not throw any error but it holds default value of "undefined"
+{
+  let username = "name";
+  console.log(username);
+  //let username = "sirname";
+  //console.log(username);// this will throw syntax error as we r trying to re-declare it in same scope 
+}
+//This is valid because it's in a different global scope
+//let username = "sirname";//output sirname
+//console.log(username);
 
+// This will throw "reference-error" as we can not access "let" before intialization
+//console.log(a);
+//let a = 2;
+//------------------------------------------------
+
+const myVar = 10;
+//myVar = 20; it can not be updated throw error="TypeError: Assignment to constant variable"
+
+const myvar = 10; // Valid
+console.log(myvar);
+
+//const myvariable;  invalid as declaration must be intialized
+
+{
+  const password = "pass";
+  console.log(password);
+  //const username = "sirname";
+  //console.log(username);// this will throw syntax error as we r trying to re-declare it in same scope 
+}
+
+
+const password = "string";//valid as this is different scope
+console.log(password);
