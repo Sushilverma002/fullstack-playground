@@ -3,7 +3,7 @@
 // var
 
 // const
-const number = 10; // you can't able to update it again.
+/*const number = 10; // you can't able to update it again.
 
 let name; // declare. as a global variable.
 
@@ -17,21 +17,21 @@ function getName() {
 // let say ki aap merko bina initalization ke use nahi kar skate.
 carName = "nano";
 let carName1 = "maruti";
-console.log(carName);
+console.log(carName);*/
 
 //var -> variable (global scope);
 //var can be used  before it has been decalred.
 
-var x; //declare
-x = 5; // intalization
+/*var x; //declare
+//x = 5; // intalization
 function getVar(x) {
   //local vairable;
   //use of that variable
   console.log(x);
 }
-getVar(x); //calling a function
+//getVar(x); //calling a function
 
-console.log(x);
+console.log(x);*/
 
 //  ------------ operators ---------------
 // operators are the symbols which tell us which type of functionality we need to perform or execute.
@@ -52,7 +52,7 @@ console.log(x);
 
 //* difference between == -> values ko compare karta hai, loose equality and === ->strict equality values + datatypes do ko compare krta hai
 
-let a = 5;
+/*let a = 5;
 let b = 5;
 console.log(a + b);
 
@@ -62,11 +62,52 @@ if (a === c) {
   console.log("both a and b are equal");
 } else {
   console.log("not equal");
-}
+}*/
 
-let myName = "Sushil";
+/*let myName = "Sushil";
 console.log(myName.toUpperCase());
 console.log(myName.toLocaleLowerCase());
 console.log(myName.length);
 console.log(myName.at());
-console.log(myName.slice(2, 4));
+console.log(myName.slice(2, 4));*/
+
+// airthemetic operators
+
+let x = 5;
+let y = 2;
+
+console.log(x * y);
+console.log(x % y);
+console.log(x - y);
+console.log(x / y);
+console.log(x ** y);
+
+//string functions
+
+let myName = "Neha";
+console.log(myName.charAt(0));
+let text = `This is an apple`;
+let text2 = `Thisis an apple`;
+console.log(text);
+console.log(text.toUpperCase());
+console.log(text.slice(0, 4));
+console.log(text.slice(5, 7));
+console.log(text.slice(8, 10));
+console.log(text.slice(11, 16));
+console.log(text2.slice(0, 5));
+
+let word1 = "This";
+let word2 = "apple"
+let output = `${word1} ${word2}`;
+console.log(output);
+
+
+//logical operators
+let X = 6;
+let Y = 3;
+console.log(x < 10 && y > 1);//return true if both the conditions are true
+console.log(x < 10 && y < 1);
+console.log(x == 5 || y == 5);//returns true if one or both expressions are true
+console.log(x == 5 || y == 3);
+
+
