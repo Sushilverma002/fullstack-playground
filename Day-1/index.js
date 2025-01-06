@@ -7,7 +7,8 @@ sdfd
 sdfdf*/
 
 // data types  : what is the type of are variable .
-
+// /loat/double -> 2.24512545
+var len = 5.5;
 // 1. Number/INT
 var length = 5;
 
