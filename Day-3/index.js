@@ -94,3 +94,58 @@ if (a < b) {
   } else {
   }
 }
+
+///////////if-else with logical && operation//////////////////
+let accbalance = 1000;
+let minbalance = 500;
+const activeacc = true;
+if (accbalance >= minbalance && activeacc) {
+  console.log("Transaction approved: Sufficient balance and account is active")
+}
+else {
+  console.log("Transaction denied: Insufficient balance or account is inactive")
+}
+//////////////////////ARRAY FUNCTIONS/////////////////////////////
+//SPLIC EFUNCTION
+// takes takes starting index and the no. of elements need to be removed
+//If we want to remove an element and adjust the length of the array 
+let fruits = ["apple", "banana", "orange"];
+fruits.splice(2, 3, "pear", "grape", "KIWI");  // Remove  element at index 2 and add 3 new elements
+console.log(fruits);
+console.log(typeof fruits)// result come as an "object"
+
+
+// SLICE FUNCTION
+//Takes starting index and the index where the slice stop ,but the element at the end index is not included
+let fruits3 = ["apple", "banana", "orange", "pear"];
+let slicedFruits = fruits3.slice(1, 3);  // Slices from index 1 to 2 (index 3 is not included)
+console.log(slicedFruits);
+
+// SHIFTFUNCTION
+
+let basket = ["apple", "banana", "orange"];
+basket.shift();  // it cn remove first index element only "apple" does not store even its index 
+console.log(basket)
+
+
+//deletefunction
+
+let fruits2 = ["apple", "banana", "orange"];
+delete fruits2[1];  // Deletes "banana" at index 1
+console.log(fruits2);//delete fruits[1] removes "banana",
+//  but the position (index 1) remains in the array with a value of undefined
+
+
+// map-transform the orignal data
+
+let numbers = [1, 2, 3, 4];
+let squaredNumbers = numbers.map(num => num * num);
+let cubedNumbers = numbers.map(num => num * num * num)
+console.log(squaredNumbers);
+console.log(cubedNumbers);
+
+// filter-
+let NUMBERS = [1, 2, 3, 4, 5];
+let evenNumbers = NUMBERS.filter(num => num % 2 === 0);
+console.log(evenNumbers);
+
