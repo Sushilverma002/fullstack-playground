@@ -149,3 +149,19 @@ let NUMBERS = [1, 2, 3, 4, 5];
 let evenNumbers = NUMBERS.filter(num => num % 2 === 0);
 console.log(evenNumbers);
 
+//to-spliced
+//it does not change the orignal array untill and unless we r assigning the result back to orignal one
+
+let arr = [1, 2, 3, 4, 5];
+let newarr = arr.toSpliced(2, 2);  // Starts at index 2, removes 2 elements
+let newarr1 = arr.toSpliced(1,0,3)// start index,removing element,added value
+console.log(newarr);
+console.log(newarr1);
+
+//fill(value, start(optional), end(optional))
+let ARR = [1, 2, 3, 4, 5];
+let ARR1 = [1, 2, 3, 4, 5];
+ARR.fill(0);  // Fills the entire array with 0
+ARR1.fill(7,0,4)
+console.log(ARR);
+console.log(ARR1);
