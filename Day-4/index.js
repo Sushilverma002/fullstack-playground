@@ -92,3 +92,39 @@ block of code
 //   console.log(array[i]);
 //   i++; // increment
 // } while (i < array.length); // condition
+
+
+/////////// loop with switch/////////////////
+// getting Fruit is ginger as there is no case for ginger default will work for that element
+
+let fruits = ["apple", "orange", "banana", "ginger", "Rose","grape"];
+
+for (let i = 0; i <6; i++) {
+    switch (fruits[i]) {
+        case "orange":    
+            continue; // Goes to the next iteration of the loop
+        case "banana":
+            console.log("Found a banana!");
+            break; // Exits switch but continues the loop
+        case "grape":
+                console.log("Found a grape");
+                break;
+        case "Rose":
+                console.log("This is not a fruit");
+                break;
+        default:
+            console.log(`Fruit is: ${fruits[i]}`);
+    }
+}
+
+//// continue can be used with loops only for skipping specific condition///
+
+for (let i = 1; i <= 10; i++) {
+        if (i % 2 === 0) {
+            continue; // Skip even numbers
+        }
+        if (i === 3) {
+                continue; // Skip when i is 3
+            }
+        console.log(i);
+    }
