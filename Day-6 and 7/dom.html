@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demoId1">Payment Due</div>
+    <div id="demoId2">HELLO WORLD</div>
+    <div class="demoClass">
+      HELLO WORLD
+      <p>new p tag</p>
+    </div>
+    <p>this is day 6 of js</p>
+
+    <button>Hello world please clic me</button>
+    <div id="div1">this is get attribute</div>
+    <h2>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatibus
+      animi sint voluptas? Commodi reiciendis cum enim minima facere nemo error
+      voluptatem libero nostrum, recusandae, molestiae quod dignissimos in illo.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ipsa
+      tempora temporibus assumenda voluptate expedita consectetur repellendus
+      possimus incidunt. Perspiciatis culpa quis magnam? Omnis numquam,
+      perspiciatis blanditiis explicabo quaerat beatae. Ipsam, officiis quidem
+      doloribus vel error sint aut. Ipsa iure, pariatur debitis temporibus minus
+      sit dolore minima quibusdam quis tempore perspiciatis illum nostrum fugit
+      consectetur rerum doloremque velit harum nulla? Natus tenetur saepe, sunt
+      asperiores consequuntur aut dicta. Beatae praesentium ducimus id repellat
+      ullam optio dolorum dolorem. Fugit beatae iusto nemo, corporis, eaque
+      mollitia fugiat accusamus perspiciatis reprehenderit minima voluptatum.
+      Nesciunt quasi molestias nulla sit ut perferendis autem atque incidunt
+      nostrum. Iste, perferendis? Blanditiis, unde iure perspiciatis laudantium
+      inventore aut, ea dolor voluptatem aliquam est nesciunt fuga, ratione
+      explicabo asperiores. Saepe, hic. Blanditiis sint provident illum harum
+      excepturi deleniti exercitationem culpa esse. Cupiditate, corrupti
+      veritatis commodi porro beatae possimus dolores modi distinctio tenetur
+      aperiam. Libero placeat consequuntur veritatis architecto autem? Incidunt,
+      sed quos. Adipisci quidem cupiditate quaerat laboriosam, facilis
+      perferendis mollitia sed nulla nemo iusto nisi voluptatum labore,
+      obcaecati aut a consequuntur totam alias! Soluta, illum! Fugiat odit quis
+      possimus? Similique id totam impedit esse repellendus labore odio qui.
+      Earum doloremque molestiae aliquam similique et quidem illum sit quisquam
+      ullam tenetur! Maxime rem hic earum explicabo tempora nihil placeat
+      quaerat! Maiores similique numquam officiis. Velit eos dicta pariatur sed
+      dolorem sunt possimus quidem sit reiciendis, non saepe, quo voluptates
+      iste, vel dolorum architecto quae neque. Nihil dicta voluptate itaque
+      fugit. Aut inventore veritatis ipsum. Recusandae, voluptatem consectetur
+      perferendis eaque ducimus minima facilis deserunt quos quis amet neque vel
+      quasi fuga similique rerum eum harum, officia, nesciunt debitis atque
+      fugiat. Nihil. Dolorem reiciendis illo sapiente non doloribus incidunt
+      aperiam neque, ex possimus quasi similique facilis, labore, aliquam ut.
+      Sapiente unde, consectetur, esse, voluptatum deleniti eaque animi tenetur
+      iusto quo ab dolorum?
+    </h2>
+
+    <script>
+      // 1. content changes with the help js
+      // innerHTML -> PROPERTY
+      // .getElementById()-> method
+      document.getElementById("demoId1").innerHTML = "hello ji";
+      document.getElementById("demoId2").innerHTML = "hello neha";
+
+      // get element by class name: find the element on the basis of there class name
+      const x = document.getElementsByClassName("demoClass");
+      document.getElementById("demoId1").innerHTML =
+        "this is the example of class name " + x[0].innerHTML;
+
+      // get element by tag name: find element by the tag name
+      document.getElementsByTagName("p");
+
+      // adding and deleting elements
+      //   document.createElement(Element)
+
+      // setAttribute and getAttribute
+      const button = document.querySelector("button");
+
+      button.setAttribute("name", "hellloButton");
+
+      // button.setAttribute("disabled", "");
+      // getattrbute(attribute) ->method jo ki returns the vale of specifies attribute
+      const div1 = document.getElementById("div1");
+      const exampleArr = div1.getAttribute("id");
+
+      //  onload
+      // window.onload = (event) => {
+      //   console.log("this is learning of onlaod function");
+      //   alert("this is an random page");
+      // };
+
+      // scrollTo
+      // window.scrollTo({
+      //   top: 500,
+      //   left: 100,
+      //   behavior: "auto",
+      // });
+    </script>
+  </body>
+  <script src="dom.js"></script>
+</html>
