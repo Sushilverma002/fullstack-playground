@@ -135,3 +135,35 @@ const object = {
 };
 
 console.log(object);
+
+// for in and for of
+// for in : statement loops through majorly properties of object are used.
+
+/*
+for( key in object ){
+
+}
+*/
+
+const people = { name: "atul", lastName: "kumar" };
+
+let text = ""; //atul
+for (let x in people) {
+  // console.log(x);
+  text += people[x]; // text = text+ people   text  = ""+atul // 2 text = atul + kumar
+  console.log(text); // atulkumar
+}
+
+// for of : When you are working with different type of data structure : array , string, node list
+
+const cars = ["BMW", "VOLVO", "NANO"];
+
+/*
+for(variable of iterable){
+}
+*/
+let text1 = "";
+for (let y of cars) {
+  text1 += y;
+  console.log(text1);
+}

@@ -12,16 +12,25 @@ myPlace();
 })();
 
 // set timeout
-setTimeout(function () {
+const myTimeout = setTimeout(function () {
   console.log("hello i am inside the set timout function");
-}, 15000);
-// clear timeout
+}, 3000);
+
+// clear timeout: it can cancel out the timeout before it triggers
+clearTimeout(myTimeout);
+
 // set interval
+function setFunction() {
+  console.log("hi i am inside the set function");
+}
+const stop = setInterval("hello", 3000);
 // clear interval
+clearInterval(stop, 5000);
 
 // arrow function
 
 const val = () => {
   console.log("welcome to the arrow function");
 };
+
 val();
