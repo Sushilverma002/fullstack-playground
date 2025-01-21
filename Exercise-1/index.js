@@ -25,12 +25,16 @@ stringLength();*/
 
 //////// airthematic operations//////////
 function mathoperations(num1,num2) {
-    let result = [num1+num2,num1*num2, num1%num2];
-    let difference = (num1-num2);
-    let quotient = (num1/num2);
+   // let result = [num1+num2,num1*num2, num1%num2];
+        let add = (num1+num2);
+        let mutliplication = (num1*num2)
+         let difference = (num1-num2);
+         let quotient = (num1/num2);
         console.log(difference);
         console.log(quotient);
-        console.log(result)   
+       // console.log(result) 
+        console.log(add) ; 
+        console.log(mutliplication);  
 }
 mathoperations(12,6);
 
@@ -98,7 +102,7 @@ sumOfNumbers(5);
 
 
 ////////////// count vowels ////////////////////
-function countVowels(string) {
+/*function countVowels(string) {
     let vowels = "aeiou";  
     let count = 0; 
 
@@ -111,10 +115,29 @@ function countVowels(string) {
 
     console.log(`The number of vowels in "${string}" is: ${count}`);
 }
-countVowels("Hello World");
+countVowels("Hello World");*/
+
+function CountVowels(string) {
+    
+    let vowels = ["a", "e", "i", "o", "u"];
+    let count = 0;
+    
+   
+    for (let i = 0; i < string.length; i++) {
+       
+        if (vowels.includes(string[i].toLowerCase())) {
+            count++;
+        }
+    }
+
+   
+    return count;
+}
+
+console.log(CountVowels("javascript"));
 
 ///////////// common array ////////////////
-function CommonElements(arr1, arr2) {
+/*function CommonElements(arr1, arr2) {
     let set1 = new Set(arr1);
     let set2 = new Set(arr2);
     let common = [...set1].filter(num => set2.has(num));
@@ -122,6 +145,27 @@ function CommonElements(arr1, arr2) {
                                          /// if a<b then a comes before b
                                          /// if a==b then it remain unchanged
 }                                       
+let array1 = [5, 3, 1, 4, 2];
+let array2 = [4, 2, 5, 1, 3];
+console.log(CommonElements(array1, array2));
+*/
+function CommonElements(arr1, arr2) {
+    let common = [];
+
+    
+    for (let i = 0; i < arr1.length; i++) {
+       
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j] && !common.includes(arr1[i])) {
+                common.push(arr1[i]);
+            }
+        }
+    }
+
+    
+    return common.sort((a, b) => a - b);
+}
+
 let array1 = [5, 3, 1, 4, 2];
 let array2 = [4, 2, 5, 1, 3];
 console.log(CommonElements(array1, array2));   
