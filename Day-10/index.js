@@ -96,3 +96,38 @@ console.log(typeCheck);
 
 const abc = parseFloat("a");
 console.log(abc);
+//////// object as  a key////////
+
+let myMap = new Map();
+let objKey = {neha: 'chaudhary'};
+myMap.set(objKey, 'Object Value');
+console.log(myMap.get(objKey));
+console.log(objKey) ;
+
+
+
+// Set a function as a key
+let funcKey = function () {};
+myMap.set(funcKey, 'Function Value');
+
+
+//////////////////// object ///////////////////
+let obj = { a: "Apple", b: "Banana", c: "Cherry" };
+
+
+console.log(Object.keys(obj));
+
+// Get values
+console.log(Object.values(obj))
+
+console.log(Object.entries(obj));
+
+// Iterate using Object.entries() /// allows us to formate 
+for (let [key, value] of Object.entries(obj)) {
+  console.log(`${key}: ${value}`);
+}
+
+//to lowercase
+for (let [key, value] of Object.entries(obj)) {
+  console.log(`Key: ${key}, Value: ${value.toUpperCase()}`);
+}
