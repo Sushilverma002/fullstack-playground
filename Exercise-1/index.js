@@ -169,3 +169,14 @@ function CommonElements(arr1, arr2) {
 let array1 = [5, 3, 1, 4, 2];
 let array2 = [4, 2, 5, 1, 3];
 console.log(CommonElements(array1, array2));   
+
+/////// reverse string///////////
+function ReverseString(string){
+    let reversed="";
+    for(i=string.length-1;i>=0;i--){
+        reversed += string[i];
+}
+return reversed;
+
+}
+console.log(ReverseString("PROGRAMMING"));
