@@ -1,4 +1,4 @@
-// import configJSON from "./index.json"; //-> ES 6
+ import configJSON from './index.json'; //-> ES 6
 
 // var json = require("./index.json");
 
