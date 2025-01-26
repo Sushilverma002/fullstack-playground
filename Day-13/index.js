@@ -30,4 +30,4 @@ console.log(person1);
 let text = Object.entries(person1);
 console.log(text);
 
-// function : call by value and call by reference
+// function : call by value and call by reference -> &
