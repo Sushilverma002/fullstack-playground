@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="600vh" height="400vh" style="border:1px solid black;"></canvas>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        // drawing shapes //
+        ctx.fillStyle='blue';
+        ctx.strokeStyle= 'black';
+        ctx.lineWidth = 5;      
+        ctx.fillRect(50,50,150,100);
+        ctx.strokeRect(50, 50, 150, 100);
+        ctx.font = '20px Arial';
+        ctx.fillStyle='black';
+        ctx.textAlign = 'center';  
+        ctx.textBaseline = 'middle'; 
+        const rectCenterX = 50 + 150 / 2;  
+        const rectCenterY = 50 + 100 / 2;  
+        ctx.fillText('rectangle', rectCenterX, rectCenterY);
+
+        /// for circle ////
+        ctx.fillStyle='red';
+        ctx.strokeStyle= 'black';
+        ctx.lineWidth = 5;      
+        ctx.beginPath();
+        ctx.arc(350, 100, 50, 0, 2 * Math.PI); 
+        ctx.stroke(); 
+        ctx.fill();
+        
+        ctx.font = '20px Arial';
+        ctx.fillStyle = 'black';
+        ctx.textAlign = 'center';  
+        ctx.textBaseline = 'middle'; 
+        ctx.fillText('circle', 350, 100);
+        
+              
+    </script>
+    
+</body>
+</html>
