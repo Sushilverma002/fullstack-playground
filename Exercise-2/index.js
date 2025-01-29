@@ -114,3 +114,26 @@ let obj = [
 
 console.log(propertyName(obj, "name"));
 console.log(obj);
+
+
+
+function HighestAge(arr) {
+  let maxAge = 0; 
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].age > maxAge) {
+      maxAge = arr[i].age;
+    }
+  }
+
+  return maxAge;
+}
+
+let obj1 = [
+  { name: "neha", age: 21 },
+  { name: "nisha", age: 22 },
+  { name: "nitu", age: 20 },
+];
+
+console.log(HighestAge(obj1)); 
+
