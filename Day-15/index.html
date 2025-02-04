@@ -8,6 +8,9 @@
   <body>
     <div id="callback"><h1></h1></div>
     <div id="callback1"></div>
+    <h1 id = "cl1"></h1>
+    <h2 id = "cl2"></h2>
+    <h3 id = "cl3"></h3>
     <script>
       function displayValues(result) {
         document.getElementById("callback").innerHTML = result;
@@ -20,9 +23,31 @@
 
       //   let val = myCalculation(5, 5, displayValues);
       //   displayValues(val);
+      function DisplayValues(result,elementId) {
+       // document.getElementById("cl1").innerHTML = result.name;
+       // document.getElementById("cl2").innerHTML = result.age;
+      //  document.getElementById("cl3").innerHTML = result.city;
+        document.getElementById(elementId).innerHTML = result;
+      }
+    
+      function Person(person, callback) {
+       // callback(person); 
+       callback(person.name , "cl1");
+       callback(person.age, "cl2");
+       callback(person.city,  "cl3");
+      }
+    
+      let obj = {
+        name: "Neha",
+        age: 21,
+        city: "Delhi",
+      };
+    
+      Person(obj, DisplayValues);
     </script>
   </body>
   <script src="index.js"></script>
 </html>
 
 <!-- you need to make 3 callback function 1. print the name 2, print the age ,3 print the city tag h1. h2 , h2  -->
+
