@@ -10,11 +10,19 @@ body {
   align-items: center;
   background-color: white;
 }
-span {
+.humidity-span span {
   color: white;
   font-size: 20px;
   font-family: "Times New Roman", Times, serif;
 }
+
+.wind-span span {
+  color: white;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+
 .main-section {
   background-color: rgb(160, 201, 195);
   box-shadow: 25px 25px 30px rgba(0, 0, 0, 0.3);
@@ -35,6 +43,7 @@ span {
   border: none;
   outline: none;
   text-align: center;
+ 
 }
 
 .topnav {
@@ -81,6 +90,11 @@ span {
   align-items: center;
   gap: 10px;
   cursor: pointer;
+}
+.search-button{
+  border: none;
+  background-color: white;
+  
 }
 @media (max-width: 700px) {
   .main-section {
