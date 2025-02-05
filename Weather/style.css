@@ -22,7 +22,6 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
-
 .main-section {
   background-color: rgb(160, 201, 195);
   box-shadow: 25px 25px 30px rgba(0, 0, 0, 0.3);
@@ -43,7 +42,6 @@ body {
   border: none;
   outline: none;
   text-align: center;
- 
 }
 
 .topnav {
@@ -91,10 +89,12 @@ body {
   gap: 10px;
   cursor: pointer;
 }
-.search-button{
+.search-button {
   border: none;
   background-color: white;
-  
+}
+.weather-info p {
+  font-size: large;
 }
 @media (max-width: 700px) {
   .main-section {
