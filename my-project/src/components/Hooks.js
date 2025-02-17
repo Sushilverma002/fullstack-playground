@@ -1,16 +1,21 @@
 // usestate :-> allows us to track the stat function component
-import { useState } from "react"; // react -> library  , destructure -> useState
+import { useEffect, useState } from "react"; // react -> library  , destructure -> useState
 
 function Hooks() {
-  const [color, setColor] = useState("Black");
-  // color -> current state
-  // set color -> function ( update karega hamari current state)
+  const [counter, setCount] = useState(0);
+
+  useEffect(() => {
+    callOnce();
+  }, []);
+
+  function callOnce() {
+    console.log("called for once only");
+  }
 
   return (
     <>
-      <div>MY fav colour is {color}!.</div>
-      <button type="button" onClick={() => setColor("blue")}>
-        click me
+      <button type="button" onClick={() => setCount(counter + 1)}>
+        Counter {counter}
       </button>
     </>
   );
