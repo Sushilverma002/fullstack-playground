@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "../components/Item";
 import ItemDates from "../components/ItemDates";
-
+import Form from "../components/Form";
 const data = [
   {
     date: "27",
@@ -22,6 +22,7 @@ const data = [
 function HomePage() {
   return (
     <>
+      <Form />
       <ItemDates date={data[0].date}>this is my first video of pros.</ItemDates>
       <Item month={data[0].month} year={data[0].year}></Item>
 
