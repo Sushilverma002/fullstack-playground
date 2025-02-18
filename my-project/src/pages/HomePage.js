@@ -2,6 +2,7 @@ import React from "react";
 import Item from "../components/Item";
 import ItemDates from "../components/ItemDates";
 import Form from "../components/Form";
+import ConditionalRendering from "../components/ConditionalRendering";
 const data = [
   {
     date: "27",
@@ -22,8 +23,9 @@ const data = [
 function HomePage() {
   return (
     <>
-      <Form />
-      <ItemDates date={data[0].date}>this is my first video of pros.</ItemDates>
+      <ConditionalRendering />
+      {/* <Form /> */}
+      {/* <ItemDates date={data[0].date}>this is my first video of pros.</ItemDates>
       <Item month={data[0].month} year={data[0].year}></Item>
 
       <ItemDates date={data[1].date}></ItemDates>
@@ -32,7 +34,7 @@ function HomePage() {
       <ItemDates date={data[2].date}></ItemDates>
       <Item month={data[2].month} year={data[2].year}></Item>
 
-      <div>HomePage</div>
+      <div>HomePage</div> */}
     </>
   );
 }
