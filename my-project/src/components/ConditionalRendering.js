@@ -7,10 +7,47 @@ function ConditionalRendering() {
   const cars = ["Ford", "BMW", "Audi"];
 
   const multipleCars = [
-    { id: 1, brand: "Ford", country: "india" },
-    { id: 2, brand: "Ford1", country: "pak" },
-    { id: 3, brand: "Ford2", country: "srilanka" },
+    { id: 1, brand: "Ford", country: "india", toggelValue: true, price: 5000 },
+    { id: 2, brand: "Ford1", country: "pak", toggelValue: false, price: 80000 },
+    {
+      id: 3,
+      brand: "Ford2",
+      country: "srilanka",
+      toggelValue: true,
+      price: 10000,
+    },
   ];
+
+  // reduce:-> input -> array
+  // total , sum , count ,
+
+  //syntax
+  /* mulitpleCar.reduce((accumaltor, currentIndex)) 
+    accumaltor-> callback function.
+    currentIndex -> default store
+  
+  */
+
+  const totalPrice = multipleCars.reduce((acc, item) => acc + item.price, 0);
+
+  // filter function
+  // conditional value, func ,-> data ko filter. true, false.
+
+  const filterValue = multipleCars.filter((data) => data.toggelValue === true);
+
+  // substring
+  const str = "this is my first project of REACT";
+  const substringValue = str.substring(0, 10);
+
+  const sampleArray = ["hi", "hello"];
+  // find
+  const findData = multipleCars.find((data) => data.id === 2);
+
+  // findIndex: only find index of the data
+
+  const findIndex = sampleArray.findIndex((arr) => arr === "hi");
+
+  console.log(filterValue);
   return (
     <>
       <div>
@@ -44,6 +81,18 @@ function ConditionalRendering() {
           ))}
         </ul>
       </div>
+
+      <h2>total Price is :{totalPrice}</h2>
+
+      <ul>
+        {filterValue.map((val) => (
+          <li key={val.id}>{val.brand}</li>
+        ))}
+      </ul>
+
+      <div>{substringValue}</div>
+      <div>{findIndex}</div>
+      <ul>{findData.brand}</ul>
     </>
   );
 
