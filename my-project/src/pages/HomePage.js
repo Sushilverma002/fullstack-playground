@@ -4,6 +4,7 @@ import ItemDates from "../components/ItemDates";
 import Form from "../components/Form";
 import ConditionalRendering from "../components/ConditionalRendering";
 import Functionalites from "../components/Functionalites";
+import LearningOfUseEffect from "../components/LearningOfUseEffect";
 const data = [
   {
     date: "27",
@@ -24,8 +25,9 @@ const data = [
 function HomePage() {
   return (
     <>
+      <LearningOfUseEffect />
       {/* <Functionalites /> */}
-      <ConditionalRendering />
+      {/* <ConditionalRendering /> */}
       {/* <Form /> */}
       {/* <ItemDates date={data[0].date}>this is my first video of pros.</ItemDates>
       <Item month={data[0].month} year={data[0].year}></Item>
