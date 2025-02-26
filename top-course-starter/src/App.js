@@ -1,7 +1,14 @@
 import React from "react";
+import Filter from "./components/FilterData.js";
+import Header from "./components/Header.js";
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <Header />
+      <Filter />
+    </>
+  );
 };
 
 export default App;
