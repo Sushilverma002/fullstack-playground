@@ -1,9 +1,11 @@
-import { filterData } from "../data.js";
-function Filter() {
+import React from "react";
+
+function Filter(props) {
+  const filterData = props.filteringData;
   return (
     <>
       {filterData.map((items) => (
-        <li key={items.id}>{items.title}</li>
+        <button key={items.id}>{items.title}</button>
       ))}
     </>
   );
