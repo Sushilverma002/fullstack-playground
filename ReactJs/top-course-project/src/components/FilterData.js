@@ -12,7 +12,7 @@ const Filter = (props) => {
     <div className="flex items-center justify-center px-4 py-4 mx-auto">
       {filterData.map((items) => (
         <button
-          className="bg-pink-500 ml-4 rounded-md px-4 py-4 hover:border hover:border-white"
+          className="bg-bgDark ml-4 rounded-md px-4 py-4 hover:border hover:border-white text-white"
           key={items.id}
           onClick={() => handleClickFunc(items.title)}
         >
