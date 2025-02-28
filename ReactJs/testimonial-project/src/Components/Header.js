@@ -1,3 +1,5 @@
+import React from "react";
+
 function Header({ heading }) {
   return (
     <div className="text-center">

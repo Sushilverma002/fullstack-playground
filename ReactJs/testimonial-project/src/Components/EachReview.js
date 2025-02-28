@@ -1,6 +1,8 @@
 import React from "react";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+const EachReview = (props) => {
+  let review = props.reviews;
 
-const EachReview = ({ review }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 mb-6">
       <div className="flex items-center mb-4">
@@ -14,7 +16,9 @@ const EachReview = ({ review }) => {
           <p className="text-gray-600">{review.job}</p>
         </div>
       </div>
+      <ImQuotesLeft />
       <p className="text-gray-700">{review.text}</p>
+      <ImQuotesRight />
     </div>
   );
 };

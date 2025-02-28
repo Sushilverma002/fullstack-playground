@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Componenets/Header.js";
+import Header from "./Components/Header.js";
 import reviews from "./data.js";
-import Template from "./Componenets/Templates.js";
+import Template from "./Components/Templates.js";
 
 const App = () => {
   return (
