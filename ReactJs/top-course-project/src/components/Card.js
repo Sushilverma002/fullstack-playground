@@ -27,7 +27,7 @@ function Card(props) {
     // case 2:
   }
   return (
-    <div className="w-[300px] bg-bgDark bg-opacity-80 rounded-md overflow-hidden">
+    <div className="w-[300px] h-[350px] ml-10 items-center bg-bgDark bg-opacity-80 rounded-md overflow-hidden">
       <div className="relative">
         <img src={courseDeatils.image.url} alt={courseDeatils.image.alt}></img>
         <div className="w-[40px] h-[40px] bg-white rounded-full absolute right-2 bottom-[-12px] grid place-items-center">

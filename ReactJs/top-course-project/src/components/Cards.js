@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { useState } from "react";
 import Card from "./Card";
 
 const Cards = (props) => {
@@ -24,7 +24,7 @@ const Cards = (props) => {
   // console.log(courseList);
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 mb-4">
+    <div className="flex flex-wrap items-center justify-center gap-4 mx-auto">
       {allData().map((data) => (
         <Card
           key={data.id}

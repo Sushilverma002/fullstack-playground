@@ -9,9 +9,13 @@ const Filter = (props) => {
     setCategory(title);
   }
   return (
-    <div className="flex flex-wrap items-center px-4 py-4 mx-auto">
+    <div className="flex items-center justify-center px-4 py-4 mx-auto">
       {filterData.map((items) => (
-        <button key={items.id} onClick={() => handleClickFunc(items.title)}>
+        <button
+          className="bg-pink-500 ml-4 rounded-md px-4 py-4 hover:border hover:border-white"
+          key={items.id}
+          onClick={() => handleClickFunc(items.title)}
+        >
           {items.title}
         </button>
       ))}
