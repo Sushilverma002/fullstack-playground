@@ -6,7 +6,8 @@ import {
   IoMdArrowDroprightCircle,
 } from "react-icons/io";
 // import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
-const Template = ({ reviews }) => {
+const Template = (props) => {
+  const reviews = props.reviews;
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // left move
@@ -35,21 +36,26 @@ const Template = ({ reviews }) => {
     console.log(setCurrentIndex(randomIndex));
   }
   return (
-    <div>
-      {reviews.map((review) => (
-        <EachReview key={review.id} reviews={review} />
-      ))}
-      <div>
-        <div>
-          <button onClick={handleLeftButton}>
-            <IoMdArrowDropleftCircle fontSize="4rem" />
-          </button>
-          <button onClick={handeRightButton}>
-            <IoMdArrowDroprightCircle fontSize="4rem" />
-          </button>
-        </div>
+    <div className="w-[85vw] md:w-[700px] bg-white flex flex-col justify-center items-center ml-[400px]  mt-10 p-10 transition-all duration-700 hover:shadow-xl rounded-md">
+      <EachReview key={reviews.id} reviews={reviews[currentIndex]} />
+      <div className="flex text 3xl mt-10 gap-3 text-violet-400 font-bold mx-auto">
         <button
-          className="text-2xl px-2 py-2 mx-auto flex flex-col justify-center items-center font-bold bg-violet-300 text-white border rounded hover:bg-violet-600 transition-all"
+          onClick={handleLeftButton}
+          className="cursor-pointer hover:text-violet-500"
+        >
+          <IoMdArrowDropleftCircle fontSize="4rem" />
+        </button>
+        <button
+          onClick={handeRightButton}
+          className="cursor-pointer hover:text-violet-500"
+        >
+          <IoMdArrowDroprightCircle fontSize="4rem" />
+        </button>
+      </div>
+      <div className="mt-6">
+        <button
+          className="bg-violet-400 hover:bg-violet-500 transition-all duration-200
+        cursor-pointer px-10 py-2 rounded-md font-bold text-white text-lg"
           onClick={handleFunSuprise}
         >
           Surprise Me

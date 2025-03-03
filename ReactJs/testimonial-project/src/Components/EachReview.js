@@ -4,21 +4,30 @@ const EachReview = (props) => {
   let review = props.reviews;
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-6 mb-6">
-      <div className="flex items-center mb-4">
+    <div className="flex flex-col md:relative">
+      <div className="absolute top-[-3rem] z-[10] mx-auto">
         <img
           src={review.image}
           alt={review.name}
-          className="w-16 h-16 rounded-full mr-4"
+          className="aspect-square rounded-full w-[140px] h-[140px] z-[25]"
         />
-        <div>
-          <h2 className="text-xl font-bold">{review.name}</h2>
-          <p className="text-gray-600">{review.job}</p>
-        </div>
+        <div className="w-[140px] h-[140px] bg-violet-500 rounded-full absolute top-[-6px] z-[-10] left-[10px]"></div>
       </div>
-      <ImQuotesLeft />
-      <p className="text-gray-700">{review.text}</p>
-      <ImQuotesRight />
+
+      <div className="text-center mt-7">
+        <p2 className="tracking-wider font-bold text-2xl capitalize">
+          {review.name}
+        </p2>
+        <p className="text-violet-300 uppercase text-sm">{review.job}</p>
+      </div>
+
+      <div className="text-violet-400 mx-auto mt-5">
+        <ImQuotesLeft />
+      </div>
+      <div className="text-center mt-4 text-slate-500">{review.text}</div>
+      <div className="text-violet-400 mx-auto mt-5">
+        <ImQuotesRight />
+      </div>
     </div>
   );
 };
