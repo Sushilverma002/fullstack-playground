@@ -125,6 +125,16 @@ function App() {
             checked={formData.mode === "Offline-Mode"}
           />
           <label htmlFor="Offline-mode">Offline Mode</label>
+
+          <input
+            type="radio"
+            onChange={changeHandler}
+            name="mode"
+            value="Offline-on-center"
+            id="Offline-on-center"
+            checked={formData.mode === "Offline-on-center"}
+          />
+          <label htmlFor="Offline-on-center">Offline on center</label>
         </fieldset>
         <label htmlFor="favCar"> Tell me your Favourite Car </label>
         <select
