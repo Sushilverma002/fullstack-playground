@@ -6,6 +6,7 @@ import Favorite from "./components/favorite";
 import Home from "./components/Home";
 import PageNotFound from "./components/PageNotFound";
 import MainHeader from "./components/MainHeader";
+import OutletHeader from "./components/OutletHeader";
 function App() {
   return (
     <div className="App">
@@ -20,8 +21,9 @@ function App() {
 
         {/* component rendering */}
 
-        <Route path="/" element={<Home />} />
-        <Route>
+        <Route path="/" element={<OutletHeader />}>
+          {/* index ka mtlb bus itna sa hai ki apka ab home apka default route ban gaya hai.. agar koi bhi route match nahi hoga toh ye default wala hi dikhe ga */}
+          <Route index element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/courses" element={<Course />} />
           <Route path="/favorite" element={<Favorite />} />
