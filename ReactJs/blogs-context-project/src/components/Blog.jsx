@@ -11,17 +11,27 @@ export const Blog = () => {
       ) : (
         <div>
           {posts.map((post) => (
-            <div key={post.id}>
-              <h1 className="text-3xl">{post.title}</h1>
+            <div
+              className="flex flex-col justify-center items-center"
+              key={post.id}
+            >
+              <h1 className="text-xl mt-4 bg-rose-300 py-5 px-5 outline-none w-[470px] text-center rounded-lg">
+                {post.title}
+              </h1>
               <p>
-                By <span className="italic">{post.author}</span> on{" "}
+                By <span className="italic text-red-500">{post.author}</span> on{" "}
                 <span>{post.category}</span>
               </p>
-              <p>{post.content}</p>
-
-              {post.tags.map((tag, index) => (
-                <p key={index}>#{tag}</p>
-              ))}
+              <div className="flex justify-center items-center bg-gray-100">
+                <p className="text-center max-w-2xl p-4 bg-white shadow-lg rounded-lg mb-1">
+                  {post.content}
+                </p>
+              </div>
+              <div className="flex flex-row gap-2 text-blue-400 mb-6">
+                {post.tags.map((tag, index) => (
+                  <p key={index}>#{tag}</p>
+                ))}
+              </div>
             </div>
           ))}
         </div>
