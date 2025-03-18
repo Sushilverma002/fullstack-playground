@@ -1,9 +1,6 @@
 import "./App.css";
 import { useContext, useEffect } from "react";
 import { AppContext } from "./context/AppContext";
-import Header from "./components/Header";
-import Blogs from "./components/Blogs";
-import Pagination from "./components/Pagination";
 import { Route, Routes, useLocation, useSearchParams } from "react-router-dom";
 import { Home } from "./Pages/Home";
 import { Tag } from "./Pages/Tag";
@@ -22,10 +19,10 @@ export default function App() {
     const page = searchParams.get("page") ?? 1;
 
     if (location.pathname.includes("tags")) {
-      const tag = location.pathname.split("/").at(-1).replaceAll(" ", "-");
+      const tag = location.pathname.split("/").at(-1).replaceAll("-", " ");
       fetchBlogPosts(Number(page), tag);
     } else if (location.pathname.includes("categories")) {
-      const category = location.pathname.split("/").at(-1).replaceAll(" ", "-");
+      const category = location.pathname.split("/").at(-1).replaceAll("-", " ");
       fetchBlogPosts(Number(page), null, category);
     } else {
       fetchBlogPosts(Number(page));
@@ -37,8 +34,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/categories/:categoryName" element={<Category />} />
-        <Route path="/tag/:tagName" element={<Tag />} />
-        <Route path="/blogs/:blogId" element={<Blog />} />
+        <Route path="/tags/:tagName" element={<Tag />} />
+        <Route path="/blog/:blogId" element={<Blog />} />
       </Routes>
     </>
   );

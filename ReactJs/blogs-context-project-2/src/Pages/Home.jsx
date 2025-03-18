@@ -4,10 +4,12 @@ import Pagination from "../components/Pagination";
 import Header from "../components/Header";
 export const Home = () => {
   return (
-    <>
+    <div>
       <Header />
-      <Blogs />
-      <Pagination />
-    </>
+      <div>
+        <Blogs />
+        <Pagination />
+      </div>
+    </div>
   );
 };

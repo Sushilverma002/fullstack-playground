@@ -1,9 +1,10 @@
 import { createContext, useState } from "react";
 import { baseUrl } from "../baseUrl";
-
+import { useNavigate } from "react-router-dom";
 export const AppContext = createContext();
 
 export default function AppContextProvider({ children }) {
+  const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
@@ -41,9 +42,8 @@ export default function AppContextProvider({ children }) {
 
   // Handle When Next and Previous button are clicked
   const handlePageChange = (page) => {
+    navigate({ search: `?page=${page}` });
     setPage(page);
-    console.log(page);
-    fetchBlogPosts(page);
   };
 
   const value = {
