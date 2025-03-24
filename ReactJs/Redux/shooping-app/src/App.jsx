@@ -1,5 +1,10 @@
+import Productlist from "./components/Productlist.jsx";
 const App = () => {
-  return <>Shopping Cart</>;
+  return (
+    <>
+      <Productlist />
+    </>
+  );
 };
 
 export default App;
