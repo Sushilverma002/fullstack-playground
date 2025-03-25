@@ -37,30 +37,30 @@
 //   );
 // }
 // export default Productlist;
-import { useEffect, useState } from "react";
-import Product from "./Product.jsx";
+// import { useEffect, useState } from "react";
+// import Product from "./Product.jsx";
 
-function Productlist() {
-  const API_URL = "https://fakestoreapi.com/products";
-  const [products, setProducts] = useState([]);
+// function Productlist() {
+//   const API_URL = "https://fakestoreapi.com/products";
+//   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    fetch(API_URL)
-      .then((response) => response.json())
-      .then((data) => {
-        setProducts(data);
-        console.log(data);
-      })
-      .catch((error) => console.error("Error fetching products:", error));
-  }, []);
+//   useEffect(() => {
+//     fetch(API_URL)
+//       .then((response) => response.json())
+//       .then((data) => {
+//         setProducts(data);
+//         console.log(data);
+//       })
+//       .catch((error) => console.error("Error fetching products:", error));
+//   }, []);
 
-  return (
-    <div className="flex flex-wrap justify-center gap-6 p-6">
-      {products.map((product) => (
-        <Product key={product.id} product={product} />
-      ))}
-    </div>
-  );
-}
+//   return (
+//     <div className="flex flex-wrap justify-center gap-6 p-6">
+//       {products.map((product) => (
+//         <Product key={product.id} product={product} />
+//       ))}
+//     </div>
+//   );
+// }
 
-export default Productlist;
+// export default Productlist;
