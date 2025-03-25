@@ -1,6 +1,25 @@
-function Product({ product }) {
+import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { addtoCart, removeCart } from "../redux/Slices/cartSlice";
+
+const Product = ({ product }) => {
+  const { cart } = useSelector((state) => state);
+  console.log(product);
+  console.log(cart);
+  const dispatch = useDispatch();
+
+  const removeItem = () => {
+    dispatch(removeCart(product.id));
+    toast.warning("Item Removed from Cart!!");
+  };
+
+  const addItem = () => {
+    dispatch(addtoCart(product));
+    toast.success("Item added to Cart!!");
+  };
   return (
-    <div className="w-64 p-4 bg-white rounded-2xl shadow-xl">
+    <div className="w-64  bg-white shadow-xl hover:scale-110 transition duration-300 ease-in gap-3 p-4 mt-10 ml-5 rounded-xl outline">
       <h3 className="text-lg font-semibold text-gray-900 truncate">
         {product.title}
       </h3>
@@ -16,11 +35,16 @@ function Product({ product }) {
         <span className="text-green-600 text-lg font-bold">
           ${product.price}
         </span>
+        {cart.some((p) => p.id === product.id) ? (
+          <button onClick={removeItem}>Remove Item</button>
+        ) : (
+          <button onClick={addItem}>Add Item</button>
+        )}
       </div>
       <h3>Rating: {product.rating.rate} ⭐</h3>
       <p>({product.rating.count} Reviews)</p>
     </div>
   );
-}
+};
 
 export default Product;
