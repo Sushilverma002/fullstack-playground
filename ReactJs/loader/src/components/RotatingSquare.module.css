@@ -1,0 +1,18 @@
+.square {
+  height: 80px;
+  width: 80px;
+  border-radius: 10%;
+  border: 2px solid white;
+  background-color: blueviolet;
+  margin-top: 20px;
+  margin-left: 20px;
+  animation: rotating-square 1s linear infinite;
+}
+@keyframes rotating-square {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
