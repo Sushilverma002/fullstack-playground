@@ -36,9 +36,19 @@ const Product = ({ product }) => {
           ${product.price}
         </span>
         {cart.some((p) => p.id === product.id) ? (
-          <button onClick={removeItem}>Remove Item</button>
+          <button
+            className="bg-green-600 rounded-md px-2 py-2 hover:bg-green-400"
+            onClick={removeItem}
+          >
+            Remove Item
+          </button>
         ) : (
-          <button onClick={addItem}>Add Item</button>
+          <button
+            className="bg-green-600 rounded-md px-2 py-2 hover:bg-green-400"
+            onClick={addItem}
+          >
+            Add Item
+          </button>
         )}
       </div>
       <h3>Rating: {product.rating.rate} ⭐</h3>

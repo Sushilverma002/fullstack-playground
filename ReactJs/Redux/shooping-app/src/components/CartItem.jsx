@@ -11,21 +11,29 @@ const CartItem = ({ item }) => {
   };
 
   return (
-    <div className="w-64  bg-white shadow-xl ">
-      <img
-        src={item.image}
-        alt={item.title}
-        className="w-full h-48 object-cover my-4"
-      />
-      <h3 className="text-lg font-semibold text-gray-900 truncate">
-        {item.title}
-      </h3>
-      <p className="text-sm text-gray-500 line-clamp-2">{item.description}</p>
-      <div className="flex justify-between items-center">
-        <span className="text-green-600 text-lg font-bold">${item.price}</span>
-        <button>
-          <RiDeleteBinLine onClick={removeFromCart} />
-        </button>
+    <div className=" mt-5 ml-5  cursor-pointer ">
+      <div className=" bg-white shadow-xl flex flex-col w-80 ">
+        <img
+          src={item.image}
+          alt={item.title}
+          className=" h-48 object-cover my-4"
+        />
+        <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-4 ml-4">
+          {item.title}
+        </h3>
+        {/* <p className="text-sm text-gray-500 line-clamp-2">{item.description}</p> */}
+
+        <div className="flex flex-row justify-between">
+          <span className="text-white px-4 py-4 ml-4 mb-4 text-lg rounded-md bg-green-600 hover:bg-green-700 ">
+            Order Now ${item.price}
+          </span>
+          <button>
+            <RiDeleteBinLine
+              className="text-5xl text-red-400 hover:text-red-500"
+              onClick={removeFromCart}
+            />
+          </button>
+        </div>
       </div>
     </div>
   );
