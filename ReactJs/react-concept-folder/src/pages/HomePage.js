@@ -5,6 +5,8 @@ import Form from "../components/Form";
 import ConditionalRendering from "../components/ConditionalRendering";
 import Functionalites from "../components/Functionalites";
 import LearningOfUseEffect from "../components/LearningOfUseEffect";
+import Swiper from "../components/swiper";
+import "./HomePage.css";
 const data = [
   {
     date: "27",
@@ -25,7 +27,10 @@ const data = [
 function HomePage() {
   return (
     <>
-      <LearningOfUseEffect />
+      <h1 style={{ textAlign: "center", fontSize: "24px", margin: "20px 0" }}>
+        Swiper
+      </h1>
+      {/* <LearningOfUseEffect /> */}
       {/* <Functionalites /> */}
       {/* <ConditionalRendering /> */}
       {/* <Form /> */}
@@ -39,6 +44,8 @@ function HomePage() {
       <Item month={data[2].month} year={data[2].year}></Item>
 
       <div>HomePage</div> */}
+
+      <Swiper />
     </>
   );
 }
